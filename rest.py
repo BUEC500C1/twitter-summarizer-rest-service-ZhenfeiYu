@@ -34,7 +34,7 @@ def post():
 
 @app.route('/downloads/<path:filename>', methods=['GET', 'POST'])
 def download(filename):
-    file = filename + 'better.mp4'
+    file = filename + 'v.mp4'
     if request.method == 'POST':
         return send_from_directory(app.config['DOWNLOAD_FOLDER'], filename=file, as_attachment=True)
     return render_template('file.html', filename=filename)
