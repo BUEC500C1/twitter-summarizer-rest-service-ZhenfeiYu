@@ -1,6 +1,7 @@
 import os
 import cv2
 import get_image
+import sys
 
 def get_video(foldername,searchword):
     file_dir=get_image.draw_test(foldername,searchword)
