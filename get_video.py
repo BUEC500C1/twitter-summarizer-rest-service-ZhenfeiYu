@@ -17,7 +17,4 @@ def get_video(foldername,searchword):
     print("Video generated!")
 
 if __name__ == '__main__':
-   
-    foldername = input('Enter your foldername: ')
-    searchword = input('Enter the searchword you would like to search: ')
-    get_video(foldername,searchword)
+   get_image(sys.argv[1],sys.argv[2])
