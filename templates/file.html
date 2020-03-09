@@ -1,0 +1,13 @@
+<body class = "body">
+    <body bgcolor = "BEE2E7">
+        <p align="center">
+            <video width="320" height="240" controls>
+              <source src="{{ url_for('download', filename=filename) }}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </p>
+          
+          <form method="post" style="text-align:center">
+            <input type="submit" value="Download" >
+          </form>
+</body>
