@@ -47,7 +47,6 @@ def get_tweets(foldername,searchword):
         f = open(x,"a+")
         for j in alltweets:
             list_word.append(j.text)
-            print(j.text, "\n", file = f)
         f.close()
         return list_word
 
