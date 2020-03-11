@@ -9,10 +9,10 @@ auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
 
-def get_tweets(foldername,searchword):
-    folder = os.path.exists('../'+foldername+'/'+foldername+'_images')
+def get_tweets(username,searchword):
+    folder = os.path.exists('../'+username+'/'+username+'_images')
     if not folder:                   
-        os.makedirs('../'+foldername+'/'+foldername+'_images')           
+        os.makedirs('../'+username+'/'+username+'_images')           
         print ("Building new folder...")
     else:
         print ("This folder exits!")
@@ -43,7 +43,7 @@ def get_tweets(foldername,searchword):
         print("%s tweets found." % (len(alltweets)))   
         
         list_word = []
-        x = '../'+foldername+'/'+foldername+".txt"
+        x = '../'+username+'/'+username+".txt"
         f = open(x,"a+")
         for j in alltweets:
             list_word.append(j.text)
@@ -51,6 +51,6 @@ def get_tweets(foldername,searchword):
         return list_word
 
 # if __name__ == '__main__':
-#     foldername = input('Enter your foldername: ')
+#     username = input('Enter your username: ')
 #     searchword = input('Enter the searchword you would like to search: ')
-#     get_tweets(foldername,searchword)
+#     get_tweets(username,searchword)
