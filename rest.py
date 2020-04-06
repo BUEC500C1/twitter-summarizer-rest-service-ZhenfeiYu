@@ -16,7 +16,7 @@ def post():
     os.system(args2)
     args1 = "python get_video.py "+ str(text1)  + " "+str(text2) 
     os.system(args1) 
-    zipFolder = zipfile.ZipFile('myVideo.zip','w', zipfile.ZIP_DEFLATED) #making the zip and sending it to the user!!!
+    zipFolder = zipfile.ZipFile('myVideo.zip','w', zipfile.ZIP_DEFLATED) 
     for root, directs, files in os.walk('/myVideo'):
         for f in files:
             zipFolder.write('/myVideo' + str(f))
