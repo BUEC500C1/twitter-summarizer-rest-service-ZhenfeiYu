@@ -5,7 +5,7 @@ from PIL import ImageFont
 
 def tweet2image(username,searchword):  
     list_word = twitter.get_tweets(username,searchword)
-    address = '../'+username+'/'+username+'_images/'
+    address = username+'/'+username+'_images/'
     #build a white background 
     for i in range(0,len(list_word)):
         font = ImageFont.truetype('./DejaVuSerif-Italic.ttf', 15)
@@ -14,7 +14,7 @@ def tweet2image(username,searchword):
         draw = ImageDraw.Draw(image)  
         draw.text((5, 200), word, fill = (0,0,0), font=font)  
         j = str(i+1)
-        image.save('../'+username+'/'+username+'_images/'+j+'.jpg',dpi=(300.0,300.0))
+        image.save(username+'/'+username+'_images/'+j+'.jpg',dpi=(300.0,300.0))
         # image.show()
     return  address
 
