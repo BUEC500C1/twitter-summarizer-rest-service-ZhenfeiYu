@@ -10,9 +10,9 @@ api = tweepy.API(auth)
 
 
 def get_tweets(username,searchword):
-    folder = os.path.exists('../'+username+'/'+username+'_images')
+    folder = os.path.exists(username+'/'+username+'_images')
     if not folder:                   
-        os.makedirs('../'+username+'/'+username+'_images')           
+        os.makedirs(username+'/'+username+'_images')           
         print ("Building new folder...")
     else:
         print ("This folder exits!")
@@ -43,7 +43,7 @@ def get_tweets(username,searchword):
         print("%s tweets found." % (len(alltweets)))   
         
         list_word = []
-        x = '../'+username+'/'+username+".txt"
+        x = username+'/'+username+".txt"
         f = open(x,"a+")
         for j in alltweets:
             list_word.append(j.text)
